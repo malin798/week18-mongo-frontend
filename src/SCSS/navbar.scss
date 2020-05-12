@@ -1,12 +1,51 @@
 .navbar {
   display: flex; 
   align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   height: 70px;
   width: 100%;
-  z-index: 5;
+  z-index: 10;
+  padding: 0 15px;
+  padding-right: 85px;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+  }
+
+    input[type=text] {
+      width: 50%;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 15px;
+      font-size: 16px;
+      background-color: white;
+      background-image: url('../Images/search.png');
+      background-position: 5px;
+      background-size: 25px 25px;
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      transition: width 0.4s ease-in-out;
+    }
+
+    input[type=text]:focus {
+      width: 80%;
+    }
+
+    button {
+      height: fit-content;
+      border: none;
+      border-radius: 15px;
+      margin-left: 15px;
+      padding: 7px;
+      background-color: whitesmoke;
+    }
+  
 
   a {
     color: white;

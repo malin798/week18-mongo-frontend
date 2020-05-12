@@ -31,7 +31,7 @@ export const SelectedShow = () => {
           <h3>{selectedShow.description}</h3>
           <p>Director: {selectedShow.director.length === 0? "Unknown" : selectedShow.director.join(", ")}</p>
           <p>Cast: {selectedShow.cast.join(", ")}</p>
-          <p>Country: {selectedShow.country}</p>
+          <p>Country: {selectedShow.country !== "" ? <p> {selectedShow.country} </p>: "Unknown" }</p>
           <p>Type: {selectedShow.type}</p>
 
         </div>

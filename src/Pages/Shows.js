@@ -5,7 +5,6 @@ export const Shows = ({show, image, link}) => {
 
   const [page, setPage] = useState(1);
   const [allShows, setAllShows] = useState("");
-  console.log(page)
    
   useEffect(() => {
     fetch(`${link}?page=${page}`)
