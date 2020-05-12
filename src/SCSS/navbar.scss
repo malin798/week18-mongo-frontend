@@ -1,0 +1,21 @@
+.navbar {
+  display: flex; 
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 5;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+
+  a {
+    color: white;
+    opacity: 0.6;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+
+  .active {
+    opacity: 1;
+  }
+}

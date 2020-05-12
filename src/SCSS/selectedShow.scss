@@ -1,0 +1,30 @@
+.selected-show-container {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.selected-show-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: fit-content;
+  width: 100%;
+  padding: 50px;
+  padding-right: 40%;
+  color: white;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+
+  h2 {
+    font-size: 2.5em;
+    margin: 15px 0;
+  }
+
+  p {
+    margin: 8px 0;
+    color: #e5e5e5;
+  }
+}
