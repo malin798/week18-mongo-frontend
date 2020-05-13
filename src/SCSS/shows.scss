@@ -16,6 +16,10 @@
     @include display(row, space-around, center);
     padding: 0 30%;
 
+    @media (max-width: 668px) { 
+        padding: 0px;
+    }
+
     button {
       @include button(15px, white, $accent-color);
       height: fit-content;
