@@ -1,11 +1,10 @@
 import React from 'react'
-import { Shows } from './Shows'
+import { Shows } from '../Components/Shows'
 import Image from 'Images/jeshoots-com-PpYOQgsZDM4-unsplash.jpg'
 
 export const Homepage = () => {
   return (
-    <div 
-      className="homepage">   
+    <>   
       
       < Shows 
         show="All shows"
@@ -13,6 +12,6 @@ export const Homepage = () => {
         image={Image}
       />
      
-    </div>
+    </>
   )
 }

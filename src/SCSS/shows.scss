@@ -14,7 +14,7 @@
 
   .page-navigator {
     @include display(row, space-around, center);
-    padding: 0 30%;
+    padding: 0 40%;
 
     @media (max-width: 668px) { 
         padding: 0px;
@@ -22,7 +22,8 @@
 
     button {
       @include button(15px, white, $accent-color);
-      height: fit-content;
+      height: 25px;
+      width: 25px;
       padding: 5px;
     }
 
