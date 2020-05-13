@@ -29,7 +29,7 @@ export const Navbar = () => {
          
             <input type="text" name="search" placeholder="Search"/>
             <button onClick={event => handleSearch(event)}>Search</button>
-          
+           
         </section>
 
       </section>

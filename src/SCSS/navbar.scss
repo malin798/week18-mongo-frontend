@@ -1,7 +1,7 @@
+@import './var-mixin.scss';
+
 .navbar {
-  display: flex; 
-  align-items: center;
-  justify-content: space-between;
+  @include display(row, space-between, center);
   position: sticky;
   top: 0;
   height: 70px;
@@ -12,9 +12,7 @@
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
 
   .search {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    @include display(row, flex-end, center);
     width: 50%;
   }
 
@@ -38,12 +36,10 @@
     }
 
     button {
+      @include button(15px, white, $accent-color);
       height: fit-content;
-      border: none;
-      border-radius: 15px;
       margin-left: 15px;
       padding: 7px;
-      background-color: whitesmoke;
     }
   
 

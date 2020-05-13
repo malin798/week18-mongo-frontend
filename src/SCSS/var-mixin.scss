@@ -1,0 +1,17 @@
+$accent-color: #18b4b4;
+
+@mixin display($direction, $justfify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justfify;
+  align-items: $align;
+}
+
+@mixin button($radius, $color, $background) {
+  background-color: $background;
+  color: $color;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: $radius;
+}

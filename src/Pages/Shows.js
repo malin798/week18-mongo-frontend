@@ -27,14 +27,6 @@ export const Shows = ({show, image, link}) => {
         style={{backgroundImage: `url(${image})`}}
       >
         <h2>{show}</h2>
-
-        {/* <form>
-          <select id="country" name="country">
-          <option value="au">Australia</option>
-          <option value="ca">Canada</option>
-          <option value="usa">USA</option>
-          </select>
-        </form> */}
   
         <div 
           className="all-shows"

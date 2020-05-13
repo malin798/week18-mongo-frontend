@@ -11,7 +11,7 @@ export const SelectedShow = () => {
     .then(res => res.json())
     .then(show => setSelectedShow(show))
   }, [params.id])
-  //fetch https://malins-movie-api.herokuapp.com/shows/${params.id}
+  
   console.log(selectedShow)
 
   if (selectedShow === "") {
@@ -31,7 +31,7 @@ export const SelectedShow = () => {
           <h3>{selectedShow.description}</h3>
           <p>Director: {selectedShow.director.length === 0? "Unknown" : selectedShow.director.join(", ")}</p>
           <p>Cast: {selectedShow.cast.join(", ")}</p>
-          <p>Country: {selectedShow.country !== "" ? <p> {selectedShow.country} </p>: "Unknown" }</p>
+          <p>Country: {selectedShow.country !== "" ? selectedShow.country : "Unknown" }</p>
           <p>Type: {selectedShow.type}</p>
 
         </div>
