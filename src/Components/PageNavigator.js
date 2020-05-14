@@ -22,11 +22,17 @@ export const PageNavigator = ({page, setPage, maxPages }) => {
 
       <p>Page {page} / {maxPages}</p>
 
-      <button onClick={() => setPage(page +1)}> 
+      <button 
+        className={page === maxPages  ? 'hidden' : "" } 
+        disabled={page === maxPages} 
+        onClick={() => setPage(page +1)}> 
         &gt;
       </button>
 
-      <button onClick={() => setPage(maxPages)}>
+      <button 
+        className={page === maxPages  ? 'hidden' : "" } 
+        disabled={page === maxPages} 
+        onClick={() => setPage(maxPages)}>
         &gt;&gt;
       </button>
 

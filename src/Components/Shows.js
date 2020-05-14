@@ -7,6 +7,7 @@ import { NoresultsAnimation } from './NoresultsAnimation'
 
 export const Shows = ({show, image, link}) => {
 
+  const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
   const [page, setPage] = useState(1)
   const [maxPages, setMaxPages] = useState()
@@ -24,13 +25,22 @@ export const Shows = ({show, image, link}) => {
 
     setLoading(true)
     fetch(link)
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(response) 
+      }
+      return response.json()
+    })
     .then(shows => {
       setMaxPages(shows.maxPages)
       setTotalShows(shows.totalShows)
       setAllShows(shows.results)
+      setError(false)
       setLoading(false)
-    })  
+    }).catch(error => {
+      setError(true)
+      setLoading(false)
+    }) 
   }, [page, link, location.search])
 
   if (allShows === "" || loading === true) {
@@ -39,7 +49,7 @@ export const Shows = ({show, image, link}) => {
         < LoadAnimation />
       </div>
     )
-  } else if (allShows === undefined) {
+  } else if (allShows === undefined || error === true) {
     return (
 
         < NoresultsAnimation image={image} />
