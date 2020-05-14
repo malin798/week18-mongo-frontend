@@ -1,6 +1,6 @@
 import React from 'react'
 import { Shows } from '../Components/Shows'
-import Image from '../Images/jeshoots-com-PpYOQgsZDM4-unsplash.jpg'
+import Image from '../Images/karen-zhao-jLRIsfkWRGo-unsplash.jpg'
 
 export const SearchPage= () => {
 

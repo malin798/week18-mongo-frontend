@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
-import Image from '../Images/zach-vessels-9DLmi4XeUB0-unsplash.jpg'
+import Image from '../Images/kilyan-sockalingum-nW1n9eNHOsc-unsplash.jpg'
 
 export const SelectedShow = () => {
   const [selectedShow, setSelectedShow] = useState("")
