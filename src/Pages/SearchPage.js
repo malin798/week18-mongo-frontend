@@ -7,12 +7,12 @@ export const SearchPage= () => {
   const link = `https://malins-movie-api.herokuapp.com/shows/`
  
   return (
-    <>
+    
       < Shows 
-        show="Search results"
+        show='Search results'
         image={Image} 
         link={link}
       />
-    </>
+    
   )
 }

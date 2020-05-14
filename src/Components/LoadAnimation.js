@@ -1,5 +1,5 @@
 import React from 'react'
-import Lottie from 'react-lottie';
+import Lottie from 'react-lottie'
 import animationData from './Lottie/dots-load.json'
 
 export const LoadAnimation = () =>  {
@@ -11,14 +11,14 @@ export const LoadAnimation = () =>  {
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
     }
-  };
+  }
 
   return(
-    <>
-      <Lottie options={defaultOptions}
-            height={400}
-            width={400}
-      />
-    </>
+    
+    <Lottie options={defaultOptions}
+      height={400}
+      width={400}
+    />
+    
   )
 }

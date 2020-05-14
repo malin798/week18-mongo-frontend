@@ -4,14 +4,12 @@ import TvshowImage from 'Images/kilyan-sockalingum-nW1n9eNHOsc-unsplash.jpg'
 
 export const Tvshows = ({link}) => {
   return (
-    <>   
-      
+
       <Shows 
-        show="Tv-shows"
+        show='Tv-shows'
         image={TvshowImage} 
         link={link}
-        />
-     
-    </>
+      />
+    
   )
 }

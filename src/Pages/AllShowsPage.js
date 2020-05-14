@@ -4,14 +4,12 @@ import Image from 'Images/jeshoots-com-PpYOQgsZDM4-unsplash.jpg'
 
 export const AllShowsPage = ({link}) => {
   return (
-    <>   
       
       < Shows 
-        show="All shows"
+        show='All shows'
         link={link}
         image={Image}
       />
-     
-    </>
+    
   )
 }

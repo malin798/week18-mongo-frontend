@@ -1,8 +1,8 @@
 import React from 'react'
-import Lottie from 'react-lottie';
+import Lottie from 'react-lottie'
 import animationData from './Lottie/searchask-loop.json'
 
-export const NoresultsAnimation = () =>  {
+export const NoresultsAnimation = ({image}) =>  {
 
   const defaultOptions = {
     loop: true,
@@ -14,9 +14,17 @@ export const NoresultsAnimation = () =>  {
   };
 
   return(
-    <div className="no-results-animation">
-      <Lottie options={defaultOptions}
-      />
+   
+    <div className='no-results' style={{backgroundImage: `url(${image})`}}>
+
+      <h2>
+        No results to show! 
+      </h2>
+
+      <div className='no-results-animation'>
+        < Lottie options={defaultOptions} />
+      </div>
+
     </div>
   )
 }
