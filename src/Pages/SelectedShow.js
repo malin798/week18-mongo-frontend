@@ -25,14 +25,32 @@ export const SelectedShow = () => {
         className="selected-show-container"
         style={{backgroundImage: `url(${Image})`}}
       >
-        <div className="selected-show-details">
+        <div className="selected-show-details-container">
 
           <h2>{selectedShow.title} ({selectedShow.release_year})</h2> 
           <h3>{selectedShow.description}</h3>
-          <p>Director: {selectedShow.director.length === 0? "Unknown" : selectedShow.director.join(", ")}</p>
-          <p>Cast: {selectedShow.cast.join(", ")}</p>
-          <p>Country: {selectedShow.country !== "" ? selectedShow.country : "Unknown" }</p>
-          <p>Type: {selectedShow.type}</p>
+
+          <div className="selected-show-details">
+            <span>
+              <p className="bold">Director:</p>
+              <p>{selectedShow.director.join(", ")}</p>
+            </span>
+            
+            <span>
+              <p className="bold">Cast: </p>
+              <p>{selectedShow.cast.join(", ")}</p>
+            </span>
+
+            <span>
+              <p className="bold">Country: </p>
+              <p>{selectedShow.country.join(", ")}</p>
+            </span>
+
+            <span>
+              <p className="bold">Type: </p>
+              <p>{selectedShow.type}</p>
+            </span>
+          </div>
 
         </div>
       </section>

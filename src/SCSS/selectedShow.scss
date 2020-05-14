@@ -7,22 +7,53 @@
   width: 100%;
 }
 
-.selected-show-details {
+.selected-show-details-container {
   @include display(column, flex-end, unset);
   height: fit-content;
   width: 100%;
   padding: 50px;
-  padding-right: 40%;
   color: white;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
 
   h2 {
-    font-size: 2.5em;
+    font-size: 2.2em;
     margin: 15px 0;
+
+    @media (max-width: 668px) {
+      font-size: 1.8em;
+    }
+  }
+
+  h3 {
+    
+    @media (max-width: 668px) {
+      font-size: 1em;
+    }
   }
 
   p {
     margin: 8px 0;
     color: #e5e5e5;
+  }
+
+  .selected-show-details {
+    display: flex; 
+    flex-wrap: wrap;
+    max-height: 50%;
+
+    @media (max-width: 668px) {
+      justify-content: center;
+    }
+    
+    span {
+      margin: 0 10px;
+      max-width: 45%;
+      max-height: 40vh;
+      overflow-y: scroll;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
   }
 }

@@ -1,11 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { Searchbar } from './Searchbar'
 
 export const Navbar = () => {
-
-  const handleSearch = (event) => {
-    event.preventDefault();
-  }
 
   return (
  
@@ -13,24 +10,19 @@ export const Navbar = () => {
 
         <section className="navlinks">
           <NavLink exact to="/">
-            Home /
+            All shows /
           </NavLink>
 
           <NavLink exact to="/movies">
             Movies /
           </NavLink>
 
-          <NavLink exact to="/tvshows">
+          <NavLink exact to="/tv show">
             Tv-shows
           </NavLink>
         </section>
 
-        <section className="search">
-         
-            <input type="text" name="search" placeholder="Search"/>
-            <button onClick={event => handleSearch(event)}>Search</button>
-           
-        </section>
+        < Searchbar />
 
       </section>
 

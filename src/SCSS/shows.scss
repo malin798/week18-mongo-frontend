@@ -1,5 +1,22 @@
 @import './var-mixin.scss';
 
+.no-results {
+  @include display(row, center, center);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: whitesmoke;
+  width: 100%;
+  height: 100%;
+  padding: 60px;
+  position: absolute;
+  top: 0;
+
+  h2 {
+    font-size: 2em;
+  }
+}
+
 .all-shows-container {
   position: absolute;
   top: 0;
@@ -16,8 +33,13 @@
     @include display(row, space-around, center);
     padding: 0 40%;
 
-    @media (max-width: 668px) { 
+    @media (max-width: 1024px) { 
         padding: 0px;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin: 5px;
     }
 
     button {
@@ -36,15 +58,15 @@
   .all-shows {
     @include display(row, center, unset);
     flex-wrap: wrap;
-    padding: 0 15px;
     background-color: transparent;
 
     a {
-      background-color: rgba(85, 42, 42, 0.18);
+      background-color: rgba(53, 36, 36, 0.35);
       width: 23%;
       height: 250px;
       margin: 15px;
       text-decoration: none;
+      border: 1px solid #b3b3b31c;
 
       @media (max-width: 667px) {
         width: 100%;
@@ -56,17 +78,24 @@
     }
 
     .show-item {
-      @include display(column, center, flex-start);
+      @include display(column, flex-start, flex-start);
       width: 100%;
       height: 100%;
-      padding: 7%;
+      padding: 4%;
       color: white;
 
       h2 {
         font-size: 1.5em;
+        max-height: 55%;
+        margin: 0;
+
+        @media (max-width: 668px) {
+          font-size: 1.5em !important;
+        }
 
         @media (max-width: 1025px) {
-          font-size: 1.3em;
+          font-size: 1.2em;
+          overflow: scroll;
         }
       }
      }

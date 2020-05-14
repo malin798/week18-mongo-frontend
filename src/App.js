@@ -4,11 +4,12 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import { Homepage } from './Pages/Homepage'
+import { AllShowsPage } from './Pages/AllShowsPage'
 import { Movies } from './Pages/Movies'
 import { Navbar } from './Components/Navbar'
 import { SelectedShow } from 'Pages/SelectedShow'
 import { Tvshows } from 'Pages/Tvshows';
+import { SearchPage } from 'Pages/SearchPage';
 
 export const App = () => {
   return (
@@ -19,19 +20,23 @@ export const App = () => {
     <Switch>
 
       <Route exact path="/" >
-       <Homepage />
+        <AllShowsPage link="https://malins-movie-api.herokuapp.com/shows" />
       </Route>
 
       <Route exact path="/shows/:id">
        < SelectedShow />
       </Route>
 
-      <Route exact path="/tvshows">
-        < Tvshows />
+      <Route exact path="/tv show">
+        < Tvshows link="https://malins-movie-api.herokuapp.com/categories/tv show"/>
       </Route>
 
       <Route exact path="/movies">
-        < Movies />
+        < Movies link="https://malins-movie-api.herokuapp.com/categories/movie"/>
+      </Route>
+
+      <Route exact path="/search">
+        < SearchPage />
       </Route>
 
     </Switch>
