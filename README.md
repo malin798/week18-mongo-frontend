@@ -1,19 +1,13 @@
-# Technigo React Starter App
+# Mongo API Project
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+First project using Mongoose to model data and seed to database.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+# The problem
 
-## Usage
+The assignment was to create a database and learn how to seed data to the database. I used different routes, parameters and querys to sort and present the data. I wanted a challenge so I also added querys to filter the data by pages since it was a lot of information in the json. I also created a frontend to my database to better understand how to structure the data in the database.
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+# View it live
 
-Alternatively, if you don't want a new git repo on your account;
+Database: https://malins-movie-api.herokuapp.com/
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+Frontend: https://malins-mongodb-frontend.netlify.app/movies
