@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route
-} from "react-router-dom"
+} from 'react-router-dom'
 import { AllShowsPage } from './Pages/AllShowsPage'
 import { Movies } from './Pages/Movies'
 import { Navbar } from './Components/Navbar'
