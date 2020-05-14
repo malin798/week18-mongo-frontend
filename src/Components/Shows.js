@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom'
 import { ShowItem } from './ShowItem';
 import { PageNavigator } from './PageNavigator'
-import { LottieAnimation } from './LottieAnimation'
-
+import { LoadAnimation } from './LoadAnimation'
+import { NoresultsAnimation } from './NoresultsAnimation';
 
 export const Shows = ({show, image, link}) => {
 
@@ -38,15 +38,16 @@ export const Shows = ({show, image, link}) => {
   if (allShows === "" || loading === true) {
     return (
       <div className="loading-animation">
-        < LottieAnimation />
+        < LoadAnimation />
       </div>
     )
   } else if (allShows === undefined) {
     return (
       <div className="no-results" style={{backgroundImage: `url(${image})`}}>
         <h2>
-          No results to show! Why don't you try something else?
+          No results to show! 
         </h2>
+        < NoresultsAnimation />
       </div>
     )
   } 
