@@ -69,7 +69,7 @@ export const Shows = ({show, image, link}) => {
   
           {allShows.map((item) => {
             return (
-              < ShowItem show={item} key={item.show_id} />
+              < ShowItem show={item} key={item._id} />
             )
           })}
   

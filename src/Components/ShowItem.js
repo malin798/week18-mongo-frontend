@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export const ShowItem = ({ show }) => {
   return (
 
-    <Link to={`/shows/${show.show_id}`}>
+    <Link to={`/shows/${show._id}`}>
       <div className='show-item'>
       
         <h2>
